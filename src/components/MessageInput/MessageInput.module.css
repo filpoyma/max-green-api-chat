@@ -8,8 +8,15 @@
   padding: 6px 10px;
   border-radius: 8px;
   font-size: 0.8125rem;
+  line-height: 1.35;
   color: #b91c1c;
   background: rgb(255 255 255 / 90%);
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .bar {

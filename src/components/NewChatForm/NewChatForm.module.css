@@ -30,7 +30,14 @@
 .error {
   margin: 8px 0 0;
   font-size: 0.8125rem;
+  line-height: 1.35;
   color: #c62828;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .actions {

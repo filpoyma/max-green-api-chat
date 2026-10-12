@@ -88,7 +88,9 @@ export const LoginPage = () => {
         </label>
 
         {state.error && (
-          <p className={styles.error} role="alert">{state.error}</p>
+          <p className={styles.error} role="alert" title={state.error}>
+            {state.error}
+          </p>
         )}
 
         <button className={styles.button} type="submit" disabled={isPending}>
