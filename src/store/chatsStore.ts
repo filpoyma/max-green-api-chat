@@ -144,11 +144,3 @@ export const useChatsStore = create<IChatsStore>()(
     },
   ),
 );
-
-export const selectActiveChat = (state: IChatsStore): IChat | null =>
-  state.chats.find((c) => c.chatId === state.activeChatId) ?? null;
-
-export const selectActiveMessages = (state: IChatsStore): IMessage[] =>
-  state.messages
-    .filter((m) => m.chatId === state.activeChatId)
-    .sort((a, b) => a.timestamp - b.timestamp);

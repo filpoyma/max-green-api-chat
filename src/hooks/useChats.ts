@@ -1,9 +1,6 @@
+import { useMemo } from 'react';
 import { useShallow } from 'zustand/react/shallow';
-import {
-  selectActiveChat,
-  selectActiveMessages,
-  useChatsStore,
-} from '../store/chatsStore.ts';
+import { useChatsStore } from '../store/chatsStore.ts';
 
 export const useChats = () => {
   const {
@@ -28,8 +25,18 @@ export const useChats = () => {
     })),
   );
 
-  const activeChat = useChatsStore(selectActiveChat);
-  const activeMessages = useChatsStore(selectActiveMessages);
+  const activeChat = useMemo(
+    () => chats.find((c) => c.chatId === activeChatId) ?? null,
+    [chats, activeChatId],
+  );
+
+  const activeMessages = useMemo(
+    () =>
+      messages
+        .filter((m) => m.chatId === activeChatId)
+        .sort((a, b) => a.timestamp - b.timestamp),
+    [messages, activeChatId],
+  );
 
   return {
     chats,

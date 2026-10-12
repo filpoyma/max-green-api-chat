@@ -1,31 +1,32 @@
 .row {
   display: flex;
   justify-content: flex-start;
-  padding: 2px 16px;
+  padding: 2px 48px 2px 16px;
 }
 
 .rowOutgoing {
   justify-content: flex-end;
+  padding: 2px 16px 2px 48px;
 }
 
 .bubble {
-  max-width: min(75%, 480px);
-  padding: 10px 14px;
-  border-radius: 16px 16px 16px 4px;
-  background: #fff;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 6%);
+  max-width: min(75%, 520px);
+  padding: 8px 12px 6px;
+  border-radius: 12px 12px 12px 4px;
+  background: var(--max-bubble-in);
+  box-shadow: var(--max-shadow);
 }
 
 .bubbleOutgoing {
-  border-radius: 16px 16px 4px 16px;
-  background: linear-gradient(135deg, #6366f1, #7c3aed);
-  color: #fff;
+  border-radius: 12px 12px 4px 12px;
+  background: var(--max-bubble-out);
 }
 
 .text {
   margin: 0;
   font-size: 0.9375rem;
-  line-height: 1.45;
+  line-height: 1.4;
+  color: var(--max-text);
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -34,21 +35,19 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 6px;
-  margin-top: 4px;
+  gap: 4px;
+  margin-top: 2px;
 }
 
 .time {
   font-size: 0.6875rem;
-  opacity: 0.75;
+  color: var(--max-text-secondary);
 }
 
 .status {
-  font-size: 0.6875rem;
-  opacity: 0.8;
+  color: var(--max-accent);
 }
 
 .statusFailed {
-  font-size: 0.6875rem;
-  color: #fecaca;
+  color: #c62828;
 }

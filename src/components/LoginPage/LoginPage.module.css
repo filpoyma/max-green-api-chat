@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: var(--max-bg);
 }
 
 .card {
@@ -14,22 +14,22 @@
   flex-direction: column;
   gap: 16px;
   padding: 32px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 24px 48px rgb(0 0 0 / 25%);
+  border-radius: var(--max-radius-xl);
+  background: var(--max-panel-bg);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
 }
 
 .title {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a2e;
+  color: var(--max-accent);
 }
 
 .subtitle {
   margin: 0 0 8px;
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--max-text-secondary);
 }
 
 .label {
@@ -38,14 +38,14 @@
   gap: 6px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--max-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .input {
   padding: 12px 14px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--max-border);
   border-radius: 10px;
   font-size: 1rem;
   text-transform: none;
@@ -54,9 +54,9 @@
 }
 
 .input:focus {
-  outline: 2px solid #6366f1;
+  outline: 2px solid var(--max-accent);
   outline-offset: 0;
-  border-color: #6366f1;
+  border-color: var(--max-accent);
 }
 
 .error {
@@ -64,8 +64,8 @@
   padding: 10px 12px;
   border-radius: 8px;
   font-size: 0.875rem;
-  color: #b91c1c;
-  background: #fef2f2;
+  color: #c62828;
+  background: #ffebee;
 }
 
 .button {
@@ -76,11 +76,15 @@
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: var(--max-accent);
   cursor: pointer;
 }
 
 .button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--max-accent-hover);
 }

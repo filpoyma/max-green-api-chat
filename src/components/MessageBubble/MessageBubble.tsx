@@ -1,3 +1,4 @@
+import { Check, CircleAlert, Clock } from 'lucide-react';
 import type { IMessage } from '../../types/chat.types.ts';
 import styles from './MessageBubble.module.css';
 
@@ -30,11 +31,14 @@ export const MessageBubble = ({ message }: IMessageBubbleProps) => {
         <p className={styles.text}>{message.text}</p>
         <div className={styles.footer}>
           <time className={styles.time}>{formatTime(message.timestamp)}</time>
+          {isOutgoing && message.status === 'sent' && (
+            <Check className={styles.status} size={14} strokeWidth={2.25} aria-label="Отправлено" />
+          )}
           {isOutgoing && message.status === 'pending' && (
-            <span className={styles.status}>…</span>
+            <Clock className={styles.status} size={12} strokeWidth={2} aria-label="Отправляется" />
           )}
           {isOutgoing && message.status === 'failed' && (
-            <span className={styles.statusFailed}>ошибка</span>
+            <CircleAlert className={styles.statusFailed} size={14} strokeWidth={2} aria-label="Ошибка" />
           )}
         </div>
       </div>

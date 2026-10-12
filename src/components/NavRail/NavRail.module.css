@@ -1,0 +1,46 @@
+.rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 72px;
+  flex-shrink: 0;
+  padding: 12px 0;
+  background: var(--max-nav-bg);
+  border-right: 1px solid var(--max-border);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 10px 4px;
+  border: none;
+  background: transparent;
+  color: var(--max-text-secondary);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.item:hover {
+  color: var(--max-text);
+}
+
+.itemActive {
+  color: var(--max-text);
+}
+
+.label {
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}

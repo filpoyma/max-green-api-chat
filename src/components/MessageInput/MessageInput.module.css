@@ -1,35 +1,49 @@
 .wrap {
   padding: 12px 16px 16px;
-  background: #f8fafc;
-  border-top: 1px solid #e2e8f0;
+  background: transparent;
 }
 
 .error {
   margin: 0 0 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
   font-size: 0.8125rem;
   color: #b91c1c;
+  background: rgb(255 255 255 / 90%);
 }
 
 .bar {
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  padding: 8px 8px 8px 16px;
+  padding: 8px 10px;
   border-radius: 24px;
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: var(--max-panel-bg);
+  box-shadow: var(--max-shadow);
+}
+
+.iconSlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 40px;
+  color: var(--max-text-secondary);
 }
 
 .input {
   flex: 1;
   min-height: 24px;
   max-height: 120px;
-  padding: 6px 0;
+  padding: 8px 4px;
   border: none;
   resize: none;
   font-size: 0.9375rem;
   font-family: inherit;
   line-height: 1.4;
+  background: transparent;
+  color: var(--max-text);
 }
 
 .input:focus {
@@ -37,18 +51,24 @@
 }
 
 .send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: 40px;
   height: 40px;
   border: none;
   border-radius: 50%;
-  font-size: 1.125rem;
   color: #fff;
-  background: #6366f1;
+  background: var(--max-accent);
   cursor: pointer;
 }
 
+.send:hover:not(:disabled) {
+  background: var(--max-accent-hover);
+}
+
 .send:disabled {
-  opacity: 0.4;
+  opacity: 0.45;
   cursor: not-allowed;
 }

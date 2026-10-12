@@ -1,4 +1,5 @@
 import { useState, type KeyboardEvent } from 'react';
+import { ArrowUp, Paperclip, Smile } from 'lucide-react';
 import styles from './MessageInput.module.css';
 
 interface IMessageInputProps {
@@ -38,6 +39,9 @@ export const MessageInput = ({ onSend, disabled }: IMessageInputProps) => {
     <div className={styles.wrap}>
       {error && <p className={styles.error} role="alert">{error}</p>}
       <div className={styles.bar}>
+        <span className={styles.iconSlot} aria-hidden>
+          <Paperclip size={20} strokeWidth={1.75} />
+        </span>
         <textarea
           className={styles.input}
           value={text}
@@ -48,6 +52,9 @@ export const MessageInput = ({ onSend, disabled }: IMessageInputProps) => {
           maxLength={4000}
           disabled={disabled || sending}
         />
+        <span className={styles.iconSlot} aria-hidden>
+          <Smile size={20} strokeWidth={1.75} />
+        </span>
         <button
           type="button"
           className={styles.send}
@@ -55,7 +62,7 @@ export const MessageInput = ({ onSend, disabled }: IMessageInputProps) => {
           disabled={disabled || sending || !text.trim()}
           aria-label="Отправить"
         >
-          ↑
+          <ArrowUp size={20} strokeWidth={2.25} aria-hidden />
         </button>
       </div>
     </div>

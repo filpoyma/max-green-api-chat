@@ -30,3 +30,4 @@ npm run dev
 - React 19, Vite, TypeScript
 - [ky](https://github.com/sindresorhus/ky) для HTTP-запросов к GREEN-API
 - [Zustand](https://github.com/pmndrs/zustand) для состояния (авторизация, чаты, сообщения)
+- [Lucide React](https://lucide.dev/) для UI-иконок

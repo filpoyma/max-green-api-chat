@@ -1,13 +1,14 @@
 .form {
-  padding: 16px;
-  border-bottom: 1px solid #e2e8f0;
-  background: #f8fafc;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--max-border);
+  background: #f8f9fb;
 }
 
 .title {
-  margin: 0 0 12px;
-  font-size: 0.9375rem;
+  margin: 0 0 10px;
+  font-size: 0.875rem;
   font-weight: 600;
+  color: var(--max-text);
 }
 
 .label {
@@ -15,20 +16,21 @@
   flex-direction: column;
   gap: 6px;
   font-size: 0.75rem;
-  color: #64748b;
+  color: var(--max-text-secondary);
 }
 
 .input {
   padding: 10px 12px;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  border: 1px solid var(--max-border);
+  border-radius: 10px;
   font-size: 1rem;
+  background: #fff;
 }
 
 .error {
   margin: 8px 0 0;
   font-size: 0.8125rem;
-  color: #b91c1c;
+  color: #c62828;
 }
 
 .actions {
@@ -41,7 +43,7 @@
 .primary,
 .secondary {
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 0.875rem;
   cursor: pointer;
   border: none;
@@ -49,7 +51,7 @@
 
 .primary {
   color: #fff;
-  background: #6366f1;
+  background: var(--max-accent);
 }
 
 .primary:disabled {
@@ -57,6 +59,6 @@
 }
 
 .secondary {
-  background: #e2e8f0;
-  color: #334155;
+  background: var(--max-search-bg);
+  color: var(--max-text);
 }

@@ -1,0 +1,17 @@
+:root {
+  --max-bg: #f0f2f5;
+  --max-nav-bg: #ffffff;
+  --max-panel-bg: #ffffff;
+  --max-chat-bg: #c8deef;
+  --max-text: #0f0f0f;
+  --max-text-secondary: #707579;
+  --max-border: #e8e8e8;
+  --max-accent: #2481cc;
+  --max-accent-hover: #1a6cb0;
+  --max-bubble-out: #ffffff;
+  --max-bubble-in: #ffffff;
+  --max-search-bg: #f0f2f5;
+  --max-radius-lg: 12px;
+  --max-radius-xl: 16px;
+  --max-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+}
