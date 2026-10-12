@@ -1,0 +1,38 @@
+.root {
+  display: flex;
+  height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.logout {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 2;
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  color: #64748b;
+  background: #fff;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .root {
+    flex-direction: column;
+  }
+}
